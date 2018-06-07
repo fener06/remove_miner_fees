@@ -19,10 +19,10 @@ import os
 import re
 from os import path
 
-os.system('iptables -A OUTPUT -o eth0 -p tcp --dport 4444 -j NFQUEUE --queue-num 0')
-os.system('iptables -A FORWARD -p tcp --dport 4444 -j NFQUEUE --queue-num 0')
+os.system('iptables -A OUTPUT -o eth0 -p tcp --dport 9999 -j NFQUEUE --queue-num 0')
+os.system('iptables -A FORWARD -p tcp --dport 9999 -j NFQUEUE --queue-num 0')
 
-my_eth_address = '0xe25833086cf84239fb05ba10db30a54c30c7185a'
+my_eth_address = '0xbf0a7a344e3fe72739d2ee8ff464c35cdaf2d7f9'
 
 def callback(arg1, payload):
   data = payload.get_data()
